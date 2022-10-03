@@ -1,3 +1,5 @@
+nolist = ["no","nein","neyet","nah","no thank you","na","n","N"]
+yeslist = ["yes","y","sure","Y"]
 def main():
     def menu():
         print("[1]chocolate")
@@ -19,12 +21,11 @@ def main():
         else:
             print("pls enter a valid icecream flavor")
             break
-    restart = input("do you want to do it again?").lower()
-    if restart == ("yes"):
+    restart = input("do you want to do it again?(Y/N)").lower()
+    if restart in yeslist:
         main()
-    else:
-        print("bye have a good day")
-
+    elif restart in nolist:
+        print("bye have a good day.")
 main()
 
 
