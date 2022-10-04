@@ -55,11 +55,14 @@ print()
 print("monthly changes in volume of water")
 print("----------------------------------")
 for i in range(12):
-    rf = float(input("pls enter the rainfall(in milimeters:"))
+    rf = float(input("pls enter the rainfall(in milimeters):"))
     r =surface_area * rf/ 1000
     c = r - lof
     v = size + c
     c = round(c,2)
     v = round(v,2)
+    print()
     print("the change in volume is:",c)
+    print()
     print("the new volume is:",v)
+print("thank you for using this program")
