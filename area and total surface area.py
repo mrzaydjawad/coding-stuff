@@ -59,8 +59,8 @@ while option != 0:
     else:
         print("invalid option.")
 
-    print()
-    menu()
-    option = int(input("enter the shape you wanna find the area and total surface area of:"))
+print()
+menu()
+option = int(input("enter the shape you wanna find the area and total surface area of:"))
 
 print("bye and have a wondefull day")
