@@ -4,8 +4,6 @@ def menu():
     print("[3] sphere")
     print("[4] closed cylinder")
     print("[0] exit the program")
-
-
 menu()
 option = int(input("enter the shape you wanna find the area and total surface area of:"))
 
@@ -58,9 +56,7 @@ while option != 0:
         print("the total surface area of the closed cylinder is ",surface_area)
     else:
         print("invalid option.")
-
 print()
 menu()
 option = int(input("enter the shape you wanna find the area and total surface area of:"))
-
 print("bye and have a wondefull day")

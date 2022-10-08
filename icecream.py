@@ -36,11 +36,3 @@ def start():
             print()
             start()
 main()
-
-
-
-
-
-
-
-
