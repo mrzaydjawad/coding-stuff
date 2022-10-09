@@ -1,7 +1,6 @@
 nolist = ("n","N")
 yeslist = ("y","Y")
 def tictactoe():
-    def boardshape():
         print("work in progress")
 def snakegame():
     print("work in progress")
@@ -19,15 +18,15 @@ def gamemenu():
     elif uc == 3:
         tetris()
     else:
-        print("please enter eithe 1,2 or 3")
         print()
+        print("please enter either 1,2 or 3")
         gamemenu()
 def greeting():
     print("are you bored cause i am very bored")
     print("sooo. . . .")
     gamegreeting()
 def gamegreeting():
-    Q = str(input("do you wanna play a game?(y/n"))
+    Q = str(input("do you wanna play a game?(y/n)"))
     if Q in yeslist:
         gamemenu()
     elif Q in nolist:
@@ -35,5 +34,4 @@ def gamegreeting():
     else:
         print("pls enter either (y or n)")
         gamegreeting()
-
 greeting()
