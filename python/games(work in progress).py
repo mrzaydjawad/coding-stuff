@@ -4,7 +4,7 @@ import random
 nolist = ("n","N")
 yeslist = ("y","Y")
 def tictactoe():
-        print("work in progress")
+    print("work in progress")
 def snakegame():
         class Snake():
             def __init__(self):
@@ -64,7 +64,7 @@ def snakegame():
         class Food():
             def __init__(self):
                 self.position = (0,0)
-                self.color = (223, 163, 49)
+                self.color = (20, 181, 63)
                 self.randomize_position()
 
             def randomize_position(self):
@@ -80,15 +80,15 @@ def snakegame():
                 for x in range(0, int(grid_width)):
                     if (x+y)%2 == 0:
                         r = pygame.Rect((x*gridsize, y*gridsize), (gridsize,gridsize))
-                        pygame.draw.rect(surface,(93,216,228), r)
+                        pygame.draw.rect(surface,(114, 24, 217), r)
                     else:
                         rr = pygame.Rect((x*gridsize, y*gridsize), (gridsize,gridsize))
-                        pygame.draw.rect(surface, (84,194,205), rr)
+                        pygame.draw.rect(surface, (65, 38, 153), rr)
 
-        screen_width = 480
-        screen_height = 480
+        screen_width = 500
+        screen_height = 500
 
-        gridsize = 20
+        gridsize = 25
         grid_width = screen_width/gridsize
         grid_height = screen_height/gridsize
 
@@ -118,7 +118,7 @@ def snakegame():
                 drawGrid(surface)
                 snake.move()
                 if snake.get_head_position() == food.position:
-                    snake.length += 2
+                    snake.length += 1
                     snake.score += 1
                     food.randomize_position()
                 snake.draw(surface)
@@ -136,7 +136,7 @@ def gamemenu():
     print("[2]snake game")
     print("[3]tetris")
     print("[0]exit the program")
-    uc = int(input("pls chose a game(1,2,3)"))
+    uc = int(input("pls chose a game(1,2,3)or exit the program"))
     if uc == 1:
         tictactoe()
     elif uc == 2:
