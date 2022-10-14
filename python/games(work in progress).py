@@ -2,8 +2,6 @@ import turtle
 import pygame
 import sys
 import random
-nolist = ("n","N")
-yeslist = ("y","Y")
 def pong():
     win = turtle.Screen()
     win.title("poing")

@@ -1,8 +1,0 @@
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\bin\Debug\c sharp project no.1.exe.config
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\bin\Debug\c sharp project no.1.exe
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\bin\Debug\c sharp project no.1.pdb
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\obj\Debug\c sharp project no.1.csproj.AssemblyReference.cache
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\obj\Debug\c sharp project no.1.csproj.SuggestedBindingRedirects.cache
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\obj\Debug\c sharp project no.1.csproj.CoreCompileInputs.cache
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\obj\Debug\c sharp project no.1.exe
-C:\Users\zaydz\Desktop\c sharp project no.1\c sharp project no.1\obj\Debug\c sharp project no.1.pdb
