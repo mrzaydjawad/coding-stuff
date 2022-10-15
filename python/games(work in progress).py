@@ -6,18 +6,57 @@ def pong():
     win = turtle.Screen()
     win.title("poing")
     win.bgcolor("black")
-    win.setup(width=1000, height=800)
+    win.setup(width=800, height=600)
     win.tracer(0)
     #paddle a
     pa = turtle.Turtle()
     pa.speed(0)
-    pa.shape("")
-
-
+    pa.shape("square")
+    pa.color("white")
+    pa.shapesize(stretch_wid=5,stretch_len=1)
+    pa.penup()
+    pa.goto(-350,0)
     #paddle b
-
+    pb = turtle.Turtle()
+    pb.speed(0)
+    pb.shape("square")
+    pb.color("white")
+    pb.shapesize(stretch_wid=5,stretch_len=1)
+    pb.penup()
+    pb.goto(350,0)
 
     #ball
+    b = turtle.Turtle()
+    b.speed(0)
+    b.shape("circle")
+    b.color("white")
+    b.shapesize(stretch_len=2,stretch_wid=2)
+    b.penup()
+    b.goto(0,0)
+
+    #functions
+    def pa_up():
+        y = pa.ycor()
+        y += 20
+        pa.sety(y)
+
+    def pa_down():
+        y = pa.ycor()
+        y -= 20
+        pa.sety(y)
+    
+    def pb_up():
+        y = pb.ycor()
+        y += 20
+        pb.sety(y)
+    
+
+    #keyboard binding
+    win.listen()
+    win.onkeypress(pa_up,"w")
+    win.onkeypress(pa_down,"d")
+
+
 
 
     while True:
