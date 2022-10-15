@@ -30,8 +30,8 @@ def pong():
     #ball
     b = turtle.Turtle()
     b.speed(0)
-    b.shape("circle")
-    b.color("white")
+    b.shape("square")
+    b.color("grey")
     b.shapesize(stretch_len=2,stretch_wid=2)
     b.penup()
     b.goto(0,0)
@@ -46,19 +46,23 @@ def pong():
         y = pa.ycor()
         y -= 20
         pa.sety(y)
-    
+
     def pb_up():
         y = pb.ycor()
         y += 20
         pb.sety(y)
-    
+
+    def pb_down():
+        y = pb.ycor()
+        y -= 20
+        pb.sety(y)
 
     #keyboard binding
     win.listen()
     win.onkeypress(pa_up,"w")
-    win.onkeypress(pa_down,"d")
-
-
+    win.onkeypress(pa_down,"s")
+    win.onkeypress(pb_up,"Up")
+    win.onkeypress(pb_down,"Down")
 
 
     while True:
