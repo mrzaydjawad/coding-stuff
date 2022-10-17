@@ -15,6 +15,7 @@ while option != 0:
         surface_area = length*length*6
         print("the area of the cube is ",area)
         print("the total surface area of a cube is ",surface_area)
+        break
     elif option == 2:
         length = input("pls enter the length:")
         length = float(length)
@@ -30,6 +31,7 @@ while option != 0:
         volume = length*width*depth
         print("the total surface area is",total_surface_area)
         print("the total volume is ",volume)
+        break
     elif option == 3:
         radius = input("pls enter the radius:")
         radius = float(radius)
@@ -42,6 +44,7 @@ while option != 0:
         volume = fr1*pie*radius_cubed
         print("the area for the sphere is ",volume)
         print("the surface area for the sphere is ",surface_area)
+        break
     elif option == 4:
         height = input("pls enter the height:")
         height = float(height)
@@ -54,8 +57,10 @@ while option != 0:
         surface_area = 2*pie*radius_squared+2*pie*radius*height
         print("the total volume of the closed cylinder is ",volume)
         print("the total surface area of the closed cylinder is ",surface_area)
+        break
     else:
         print("invalid option.")
+        break
 print()
 menu()
 option = int(input("enter the shape you wanna find the area and total surface area of:"))
