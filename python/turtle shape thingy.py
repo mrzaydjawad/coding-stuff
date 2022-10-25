@@ -1,4 +1,3 @@
-from re import X
 import turtle
 
 def importantmoving():
