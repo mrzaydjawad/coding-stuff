@@ -1,4 +1,4 @@
-
+yeslist = ("yes","y","Y")
 print("size of the pond")
 print("----------------")
 width = input("pls enter the width:")
@@ -52,17 +52,24 @@ new_volume = size+change
 print("the change to the pond is:",change)
 print("the new volume of water in the pond is ",new_volume)
 print()
-print("monthly changes in volume of water")
-print("----------------------------------")
-for i in range(12):
-    rf = float(input("pls enter the rainfall(in milimeters):"))
-    r =surface_area * rf/ 1000
-    c = r - lof
-    v = size + c
-    c = round(c,2)
-    v = round(v,2)
+Q = input("would you like to do the monthly changes in the volume of water")
+if Q in yeslist:
+    month()
+else:
+    print("ok bye")
+def month():
     print()
-    print("the change in volume is:",c)
-    print()
-    print("the new volume is:",v)
-print("thank you for using this program")
+    print("monthly changes in volume of water")
+    print("----------------------------------")
+    for i in range(12):
+        rf = float(input("pls enter the rainfall(in milimeters):"))
+        r =surface_area * rf/ 1000
+        c = r - lof
+        v = size + c
+        c = round(c,2)
+        v = round(v,2)
+        print()
+        print("the change in volume is:",c)
+        print()
+        print("the new volume is:",v)
+    print("thank you for using this program")
