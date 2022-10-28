@@ -65,7 +65,6 @@ def pong():
     win.onkeypress(pb_up,"Up")
     win.onkeypress(pb_down,"Down")
 
-
     while True:
         win.update()
 

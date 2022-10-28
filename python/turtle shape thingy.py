@@ -40,4 +40,6 @@ def importantmoving():
     while True:
         win.update()
 
+
+
 importantmoving()
