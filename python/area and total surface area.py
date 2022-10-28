@@ -1,3 +1,6 @@
+from fractions import Fraction
+fr1 = Fraction(4,3)
+pie = Fraction(22,7)
 def menu():
     print("[1] cube")
     print("[2] cuboid")
@@ -35,9 +38,6 @@ while option != 0:
     elif option == 3:
         radius = input("pls enter the radius:")
         radius = float(radius)
-        from fractions import Fraction
-        fr1 = Fraction(4,3)
-        pie = Fraction(22,7)
         radius_squared = radius*radius
         radius_cubed = radius*radius*radius
         surface_area = 4*pie*radius_squared
@@ -50,8 +50,6 @@ while option != 0:
         height = float(height)
         radius = input("pls enter the radius:")
         radius = float(radius)
-        from fractions import Fraction
-        pie = Fraction(22,7)
         radius_squared = radius*radius
         volume = pie*radius_squared*height
         surface_area = 2*pie*radius_squared+2*pie*radius*height
