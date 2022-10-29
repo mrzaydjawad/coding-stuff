@@ -10,11 +10,4 @@ def question():
         print("ok bye")
     else:
         print("pls enter either (y/n)")
-        print()
-        start = input("would you like to take the program again?:")
-        print()
-        if start in yeslist:
-            question()
-        else:
-            print("ok bye")
 question()

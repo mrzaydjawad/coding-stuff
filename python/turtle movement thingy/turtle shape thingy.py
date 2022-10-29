@@ -4,14 +4,14 @@ def importantmoving():
     win = turtle.Screen()
     win.title("moving")
     win.bgcolor("black")
-    win.setup(width=800, height=800)
+    win.setup(width=1920, height=1080)
+    win.bgpic('bg.gif')
     win.tracer(0)
     #moving
     a = turtle.Turtle()
     a.speed(1)
     a.shape("square")
     a.color("white")
-    a.shapesize(stretch_wid=5,stretch_len=3)
     a.penup()
     a.goto(0,0)
     #functions
@@ -39,7 +39,15 @@ def importantmoving():
     win.onkeypress(a_left,"Left")
     while True:
         win.update()
-
+        #border
+        if a.ycor()<-800:
+            a.sety(-795)
+        if a.ycor()>800:
+            a.sety(795)
+        if a.xcor()<-800:
+            a.setx(-795)
+        if a.xcor()>800:
+            a.setx(795)
 
 
 importantmoving()
