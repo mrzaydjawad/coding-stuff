@@ -5,7 +5,7 @@ def importantmoving():
     win.title("moving")
     win.bgcolor("black")
     win.setup(width=1920, height=1080)
-    win.bgpic('bg.gif')
+    win.bgcolor('green')
     win.tracer(0)
     #moving
     a = turtle.Turtle()
@@ -40,14 +40,14 @@ def importantmoving():
     while True:
         win.update()
         #border
-        if a.ycor()<-800:
-            a.sety(-795)
-        if a.ycor()>800:
-            a.sety(795)
-        if a.xcor()<-800:
-            a.setx(-795)
-        if a.xcor()>800:
-            a.setx(795)
+        if a.ycor()<-540:
+            a.sety(-530)
+        if a.ycor()>540:
+            a.sety(530)
+        if a.xcor()<-960:
+            a.setx(-950)
+        if a.xcor()>960:
+            a.setx(950)
 
 
 importantmoving()
