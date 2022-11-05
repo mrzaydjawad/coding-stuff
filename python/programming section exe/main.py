@@ -1,7 +1,3 @@
-from os import kill
-from this import d
-
-
 yeslist = ("yes","y","Y")
 print("size of the pond")
 print("----------------")
@@ -55,8 +51,11 @@ change = round(change,2)
 new_volume = size+change
 print("the change to the pond is:",change)
 print("the new volume of water in the pond is ",new_volume)
+def bye():
+    print("bye bye")
 Q = input("do you want the monthly?: ")
 if Q in yeslist:
     pass
 else:
-    print("bye")
+    bye()
+bye()
