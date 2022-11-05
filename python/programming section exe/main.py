@@ -21,8 +21,8 @@ htftp = size/hours
 htftp = round(htftp,2)
 days = htftp/24
 days = int(days)
-dais = days*24
-hl = htftp-dais
+daes = days*24
+hl = htftp-daes
 hl = round(hl,2)
 print("the liters per hour is:",hour)
 print("the cubic meters per hour is:",hours)
