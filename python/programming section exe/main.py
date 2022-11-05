@@ -1,3 +1,6 @@
+from os import kill
+from this import d
+
 
 yeslist = ("yes","y","Y")
 print("size of the pond")
