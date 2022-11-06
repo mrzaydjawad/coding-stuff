@@ -7,4 +7,5 @@ while multi is not 12:
     multi += 1
     x = number*multi
     a += 1
+    x = round(x,2)
     print(f"{a}--{x}--")
