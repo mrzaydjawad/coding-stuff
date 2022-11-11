@@ -1,10 +1,10 @@
 import turtle
-import pygame
 import sys
 import random
 import tkinter as tk
 from threading import Lock
-from pygame.locals import *
+import pygame
+from pygame.locals import*
 def pong():
     win = turtle.Screen()
     win.title("poing")
