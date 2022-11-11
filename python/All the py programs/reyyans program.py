@@ -49,3 +49,4 @@ def functions():
         print("invalid choice")
 mainMenu()
 functions()
+input()

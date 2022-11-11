@@ -36,3 +36,4 @@ def start():
             print()
             start()
 main()
+input()

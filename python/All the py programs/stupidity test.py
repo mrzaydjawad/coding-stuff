@@ -11,3 +11,4 @@ def question():
     else:
         print("pls enter either (y/n)")
 question()
+input()

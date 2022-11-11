@@ -8,3 +8,4 @@ while num > special_num:
     print(num)
     if (special_num<0):
         num -= 1
+input()

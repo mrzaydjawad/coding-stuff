@@ -370,3 +370,4 @@ def gamemenu():
         print("please enter either 1,2,3")
         gamemenu()
 gamemenu()
+input()

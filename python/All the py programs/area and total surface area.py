@@ -71,3 +71,4 @@ else:
         main()
 print()
 print("bye and have a wondefull day")
+input()

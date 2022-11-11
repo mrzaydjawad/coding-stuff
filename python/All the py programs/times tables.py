@@ -9,3 +9,4 @@ while multi != 12:
     a += 1
     x = round(x,2)
     print(f"{a}~~ {x} ~~")
+input()

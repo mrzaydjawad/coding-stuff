@@ -59,3 +59,4 @@ if Q in yeslist:
 else:
     bye()
 bye()
+input()
