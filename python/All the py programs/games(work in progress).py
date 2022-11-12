@@ -94,8 +94,6 @@ def pong():
         if pb.ycor()<-290:
             pb.sety(-290)
         #collisions
-        if b.xcor() > 340 and b.xcor <350 and (b.ycor() < pb.ycor()+40 and b.ycor()>pb.ycor()-40):
-            b.dx *= -1
 
 def snakegame():
             class Snake():
