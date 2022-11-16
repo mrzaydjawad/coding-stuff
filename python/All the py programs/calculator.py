@@ -27,3 +27,4 @@ if calculation_selection == 4:
     print("the answer is ",divide_ans)
 else:
     print("pls enter either 1/2/3/4")
+input()
