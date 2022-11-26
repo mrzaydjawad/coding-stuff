@@ -11,6 +11,11 @@ def pong():
     win.bgcolor("black")
     win.setup(width=800, height=600)
     win.tracer(0)
+
+    #score
+    score_a = 0
+    score_b = 0
+
     #paddle a
     pa = turtle.Turtle()
     pa.speed(0)
@@ -27,6 +32,16 @@ def pong():
     pb.shapesize(stretch_len=1,stretch_wid=5,outline=10)
     pb.penup()
     pb.goto(350,0)
+
+    #pen
+    pen = turtle.Turtle()
+    pen.speed(0)
+    pen.color("white")
+    pen.penup()
+    pen.hideturtle()
+    pen.goto(0,260)
+    pen.write(("blue:0  red:0"),align="center",font=("courier",30,"normal"))
+
 
     #ball
     b = turtle.Turtle()
@@ -73,31 +88,41 @@ def pong():
         b.sety(b.ycor()+b.dy)
 
         #border 
-        if b.ycor()>290:
-            b.sety(290)
+        if b.ycor()>280:
+            b.sety(280)
             b.dy *= -1
-        if b.ycor()<-290:
-            b.sety(-290)
+        if b.ycor()<-280:
+            b.sety(-280)
             b.dy *= -1
         if b.xcor()>390:
             b.goto(0,0)
             b.dx *= -1
+            score_a += 1
+            pen.clear()
+            pen.write("blue:{}  red:{}".format(score_b,score_a),align="center",font=("courier",30,"normal"))
+
+
         if b.xcor()<-390:
             b.goto(0,0)
             b.dx *= -1
-        if pa.ycor()>290:
-            pa.sety(290)
-        if pa.ycor()<-290:
-            pa.sety(-290)
-        if pb.ycor()>290:
-            pb.sety(290)
-        if pb.ycor()<-290:
-            pb.sety(-290)
+            score_b += 1
+            pen.clear()
+            pen.write("blue:{}  red:{}".format(score_b,score_a),align="center",font=("courier",30,"normal"))
+
+
+        if pa.ycor()>240:
+            pa.sety(240)
+        if pa.ycor()<-240:
+            pa.sety(-240)
+        if pb.ycor()>240:
+            pb.sety(240)
+        if pb.ycor()<-240:
+            pb.sety(-240)
         #collisions
-        if (b.xcor() > 325 and b.xcor() < 340) and (b.ycor() < pb.ycor() + 50 and b.ycor() > pb.ycor() -50):
+        if (b.xcor() > 325 and b.xcor() < 340) and (b.ycor() < pb.ycor() + 60 and b.ycor() > pb.ycor() -60):
             b.setx(325)
             b.dx *= -1
-        if (b.xcor() < -325 and b.xcor() > -340) and (b.ycor() < pa.ycor() + 50 and b.ycor() > pa.ycor() - 50):
+        if (b.xcor() < -325 and b.xcor() > -340) and (b.ycor() < pa.ycor() + 60 and b.ycor() > pa.ycor() - 60):
             b.setx(-325)
             b.dx *= -1
 def snakegame():
