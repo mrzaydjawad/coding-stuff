@@ -1,6 +1,6 @@
 import random
-yeslist = ("yes","yeah","sure","y","Y")
-nolist = ("no","nah","n","N")
+yeslist = ("y","Y")
+nolist = ("n","N")
 def question():
     st = input("would like to take a a stupidity test?(y/n)")
     if st in yeslist:

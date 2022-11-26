@@ -15,16 +15,16 @@ def pong():
     pa = turtle.Turtle()
     pa.speed(0)
     pa.shape("square")
-    pa.color("white")
-    pa.shapesize(stretch_wid=5,stretch_len=1)
+    pa.color("blue")
+    pa.shapesize(stretch_len=1,stretch_wid=5,outline=10)
     pa.penup()
     pa.goto(-350,0)
     #paddle b
     pb = turtle.Turtle()
     pb.speed(0)
     pb.shape("square")
-    pb.color("white")
-    pb.shapesize(stretch_wid=5,stretch_len=1)
+    pb.color("red")
+    pb.shapesize(stretch_len=1,stretch_wid=5,outline=10)
     pb.penup()
     pb.goto(350,0)
 
@@ -36,7 +36,7 @@ def pong():
     b.penup()
     b.goto(0,0)
     b.dx = 0.1
-    b.dy = 0.01
+    b.dy = 0.1
     #functions
     def pa_up():
         y = pa.ycor()
@@ -94,7 +94,12 @@ def pong():
         if pb.ycor()<-290:
             pb.sety(-290)
         #collisions
-
+        if (b.xcor() > 325 and b.xcor() < 340) and (b.ycor() < pb.ycor() + 50 and b.ycor() > pb.ycor() -50):
+            b.setx(325)
+            b.dx *= -1
+        if (b.xcor() < -325 and b.xcor() > -340) and (b.ycor() < pa.ycor() + 50 and b.ycor() > pa.ycor() - 50):
+            b.setx(-325)
+            b.dx *= -1
 def snakegame():
             class Snake():
                 def __init__(self):
