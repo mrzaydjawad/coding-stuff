@@ -1,7 +1,7 @@
 import pygame
 pygame.init()
 screen = pygame.display.set_mode((1920,1080))
-bg = pygame.image.load("coding/python/All the py programs/space.gif")
+bg = pygame.image.load("coding/python/All the py programs/space.png")
 running = True
 while running:
     for event in pygame.event.get():
