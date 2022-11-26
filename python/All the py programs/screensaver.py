@@ -2,10 +2,10 @@ import random
 import pygame as py
 py.init()
 screen = py.display.set_mode((1920,1080))
-bg = py.image.load('C:/Users/zaydz/Desktop/coding/python/All the py programs/images/space.png')
-mover = py.image.load('C:/Users/zaydz/Desktop/coding/python/All the py programs/images/waterbottles for coding.png')
-mx = random.randrange(200,1720)
-my = random.randrange(203,877)
+bg = py.image.load('C:/Users/zaydz/Desktop/coding/python/All the py programs/images/backrooms.jpg')
+mover = py.image.load('C:/Users/zaydz/Desktop/coding/python/All the py programs/images/welcome.png')
+mx = random.randrange(400,1520)
+my = random.randrange(200,880)
 sx = 3
 sy = 2
 clock = py.time.Clock()
@@ -20,7 +20,7 @@ while running:
     py.display.update()
     mx += sx
     my += sy
-    if mx <= 0 or mx >= 1720 :
+    if mx <= 0 or mx >= 1520:
         sx *= -1
-    if my <=0 or my >= 877:
+    if my <=0 or my >= 880:
         sy *= -1
