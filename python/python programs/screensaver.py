@@ -2,8 +2,8 @@ import random
 import pygame as py
 py.init()
 screen = py.display.set_mode((1920,1080))
-bg = py.image.load('C:/Users/zaydz/Desktop/coding/python/All the py programs/images/backrooms.jpg')
-mover = py.image.load('C:/Users/zaydz/Desktop/coding/python/All the py programs/images/welcome.png')
+bg = py.image.load('C:/Users/zaydz/Desktop/coding/python/python programs/images/backrooms.jpg')
+mover = py.image.load('C:/Users/zaydz/Desktop/coding/python/python programs/images/welcome.png')
 mx = random.randrange(400,1520)
 my = random.randrange(200,880)
 sx = 3
