@@ -55,7 +55,13 @@ def bye():
     print("bye bye")
 Q = input("do you want the monthly?: ")
 if Q in yeslist:
-    pass
+    for i in range(12):
+        rf = float(input("please enter the rain in millimetres:"))
+        r = surface_area*rf/1000
+        c2 = r-lof
+        v2 = size + change
+        print(f"the change in volume is {c2}")
+        print(f"the neww volume is {v2}")
 else:
     bye()
 bye()
