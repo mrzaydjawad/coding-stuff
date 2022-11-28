@@ -5,6 +5,7 @@ import tkinter as tk
 from threading import Lock
 import pygame
 from pygame.locals import*
+from playsound import playsound
 def pong():
     win = turtle.Screen()
     win.title("poing")
@@ -122,9 +123,11 @@ def pong():
         if (b.xcor() > 325 and b.xcor() < 340) and (b.ycor() < pb.ycor() + 60 and b.ycor() > pb.ycor() -60):
             b.setx(325)
             b.dx *= -1
+            playsound("C:\\Users\\zaydz\\Desktop\\coding\\python\\python programs\\sound effects\\vine boom.mp3")
         if (b.xcor() < -325 and b.xcor() > -340) and (b.ycor() < pa.ycor() + 60 and b.ycor() > pa.ycor() - 60):
             b.setx(-325)
             b.dx *= -1
+            playsound("C:\\Users\\zaydz\\Desktop\\coding\\python\\python programs\\sound effects\\vine boom.mp3")
 def snakegame():
             class Snake():
                 def __init__(self):
@@ -374,8 +377,8 @@ def tetris():
                 color_num = self.tetris.get_color(i//self.tetris.FIELD_WIDTH, i % self.tetris.FIELD_WIDTH)
                 self.canvas.itemconfig(_id, fill=COLORS[color_num])
         
-            self.status_msg['text'] = "Score: {}\nLevel: {}".format(self.tetris.score, self.tetris.level)
-            self.game_over_msg['text'] = "GAME OVER.\nPress UP\nto reset" if self.tetris.game_over else ""
+            self.status_msg['text'] = "Score: {}\\nLevel: {}".format(self.tetris.score, self.tetris.level)
+            self.game_over_msg['text'] = "GAME OVER.\\nPress UP\\nto reset" if self.tetris.game_over else ""
 
     root = tk.Tk()
     app = Application(master=root)
