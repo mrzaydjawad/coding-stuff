@@ -1,8 +1,8 @@
 import turtle
 import time
 win = turtle.Screen()
-win.bgcolor("black")
-win.setup(width = 1920,height=1080)
+win.bgpic("C:\\Users\\zaydz\\Desktop\\coding\\python\\python programs\\images\\watermelon vs corn.png")
+win.setup(width=1920,height=1080,startx=0,starty=0)
 win.tracer(0)
 seconds = 0
 minutes = 0
@@ -11,6 +11,7 @@ pen = turtle.Turtle()
 pen.speed(0)
 pen.color("white")
 pen.penup()
+pen.goto(0,400)
 pen.hideturtle()
 pen.write((f"hour {hour}: minute {minutes}: second {seconds}"),align="center",font=("courier",50,"normal"))
 while True:

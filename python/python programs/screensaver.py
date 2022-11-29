@@ -1,15 +1,19 @@
 import random
 import pygame as py
+import turtle
+import time
 py.init()
 screen = py.display.set_mode((1920,1080))
 bg = py.image.load('C:/Users/zaydz/Desktop/coding/python/python programs/images/backrooms.jpg')
 mover = py.image.load('C:/Users/zaydz/Desktop/coding/python/python programs/images/welcome.png')
+seconds = 0
+minutes = 0
+hours = 0
 mx = random.randrange(400,1520)
 my = random.randrange(200,880)
 sx = 3
 sy = 2
 clock = py.time.Clock()
-tick = 30
 running = True
 while running:
     for event in py.event.get():
