@@ -1,6 +1,5 @@
 import random
 import pygame as py
-import turtle
 import time
 py.init()
 screen = py.display.set_mode((1920,1080))
