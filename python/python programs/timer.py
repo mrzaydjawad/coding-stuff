@@ -37,3 +37,4 @@ while True:
             seconds -= 60
             minutes -= 60
             hour -= 24
+input()
