@@ -20,8 +20,8 @@ while running:
             running = False
     current_time = pygame.time.get_ticks()
     if current_time > 1000:
-        seconds += 1
         pygame.time.wait(1000)
+        seconds += 1
     if seconds == 60:
         minutes += 1
         seconds = 0 
