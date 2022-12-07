@@ -11,7 +11,7 @@ mx = random.randrange(400,1520)
 my = random.randrange(200,880)
 sx = 3
 sy = 2
-current_time = 0
+start_time = None
 clock = pygame.time.Clock()
 running = True
 while running:
@@ -19,9 +19,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     current_time = pygame.time.get_ticks()
-    if current_time > 1000:
-        pygame.time.wait(1000)
-        seconds += 1
+    seconds += 1
     if seconds == 60:
         minutes += 1
         seconds = 0 
