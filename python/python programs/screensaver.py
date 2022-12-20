@@ -20,21 +20,25 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False 
-    miliseconds += 1
-    if miliseconds > 50:
-        seconds += 1
-        miliseconds -= 50
-    if seconds > 60:
-        minutes += 1
-        seconds -= 60 
-    if minutes > 60:
-        hours += 1
-        minutes -= 60
-    if hours > 24:
-        seconds = 0
-        minutes = 0
-        hours = 0
-        miliseconds = 0 
+    def time_run():
+        global miliseconds,seconds,minutes,hours
+        miliseconds += 1
+        if miliseconds > 50:
+            seconds += 1
+            miliseconds -= 50
+        if seconds > 60:
+            minutes += 1
+            seconds -= 60 
+        if minutes > 60:
+            hours += 1
+            minutes -= 60
+        if hours > 24:
+            seconds = 0
+            minutes = 0
+            hours = 0
+            miliseconds = 0 
+    time_run()
+    time = (miliseconds,seconds,minutes,hours)
     mx += sx
     my += sy
     if mx <= 0 or mx >= 1520:
