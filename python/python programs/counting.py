@@ -1,11 +1,4 @@
-num = 0
-special_num = int(input("pls enter a number:"))
-while num < special_num:
-    print(num)
-    if (special_num>0):
-        num += 1
-while num > special_num:
-    print(num)
-    if (special_num<0):
-        num -= 1
-input()
+i = int(input('number:'))
+for i in range(i):
+    i += 1
+    print(i)
