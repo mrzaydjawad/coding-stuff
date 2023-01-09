@@ -1,14 +1,23 @@
 import turtle
+import random 
+r_x = random.randint(0,1500)
+r_y = random.randint(0,1000)
+win = turtle.Screen()
+win.title("moving")
+win.bgcolor("black")
+win.setup(width=1500, height=1000)
+win.bgcolor('green')
+win.tracer(0)
+def food():
+    f = turtle.Turtle()
+    f.speed(0)
+    f.shape("square")
+    f.penup()
+    f.goto(r_x,r_y)
 def importantmoving():
-    win = turtle.Screen()
-    win.title("moving")
-    win.bgcolor("black")
-    win.setup(width=1920, height=1080)
-    win.bgcolor('green')
-    win.tracer(0)
     #moving
     a = turtle.Turtle()
-    a.speed(1)
+    a.speed(0)
     a.shape("square")
     a.color("white")
     a.penup()
@@ -36,17 +45,7 @@ def importantmoving():
     win.onkeypress(a_right,"Right")
     win.onkeypress(a_down,"Down")
     win.onkeypress(a_left,"Left")
-    while True:
-        win.update()
-        #border
-        if a.ycor()<-540:
-            a.sety(-530)
-        if a.ycor()>540:
-            a.sety(530)
-        if a.xcor()<-960:
-            a.setx(-950)
-        if a.xcor()>960:
-            a.setx(950)
-
-
-importantmoving()
+while True:
+    win.update()
+    importantmoving()
+    food()
