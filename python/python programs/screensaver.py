@@ -13,6 +13,7 @@ left_wall = 0
 right_wall = 0
 up_wall = 0
 down_wall = 0
+corner = 0
 mx = random.randrange(400,1520)
 my = random.randrange(200,880)
 sx = 3
@@ -61,12 +62,19 @@ while running:
     if my >= 880:
         down_wall += 1
     #checking for corners
-    
+    if (mx >= 1520) and (my >= 880):
+        corner += 1
+    if (mx >= 1520) and (my <= 0):
+        corner += 1
+    if (mx <= 0) and (my >= 880):
+        corner += 1
+    if (mx <= 0) and (my <= 0):
+        corner += 1
     #putting everything on the screen
     tume = pygame.font.Font("C:/Users/zaydz/Desktop/coding/python/python programs/fonts/Sitka.ttc",50)
     tumo = tume.render(f"hour : {hours}  minute : {minutes}  second : {seconds}",False,(255,255,255))
     wallas = pygame.font.Font("C:/Users/zaydz/Desktop/coding/python/python programs/fonts/Sitka.ttc",50)
-    walls = wallas.render(f"left wall:{left_wall}  right wall:{right_wall}  upper wall:{up_wall}  lower wall:{down_wall}",False,(255,255,255))
+    walls = wallas.render(f"left wall:{left_wall}  right wall:{right_wall}  upper wall:{up_wall}  lower wall:{down_wall}  corners:{corner}",False,(255,255,255))
     screen.blit(bg,(0,0))
     screen.blit(mover,(mx,my))
     screen.blit(tumo,(570,0))
