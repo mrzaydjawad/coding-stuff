@@ -6,6 +6,7 @@ def menu():
 menu()
 selection_list = [1,2,3]
 selection = int(input("enter a number[1,2,3]:"))
+print()
 if selection in selection_list:
     if selection == 1:
         a = int(input("enter 'a':"))
@@ -14,6 +15,7 @@ if selection in selection_list:
         b_squared = b*b
         c = a_squared + b_squared
         c_under_root = 0
+        input()
     if selection == 2:
         d = int(input("enter 'a':"))
         e = int(input("enter 'b':"))
@@ -33,5 +35,7 @@ if selection in selection_list:
         i_squared = i*i
         h = i_squared-g_squared
         h_under_root = 0
+        input()
 else:
     print("error:please enter on of the mentioned numbers")
+    input()
