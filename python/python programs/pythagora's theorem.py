@@ -14,7 +14,8 @@ if selection in selection_list:
         a_squared = a*a
         b_squared = b*b
         c = a_squared + b_squared
-        c_under_root = 0
+        c_under_root = c**0.5
+        print(f"the hypotenus is {c_under_root}")
         input()
     if selection == 2:
         d = int(input("enter 'a':"))
@@ -34,7 +35,8 @@ if selection in selection_list:
         g_squared = g*g
         i_squared = i*i
         h = i_squared-g_squared
-        h_under_root = 0
+        h_under_root = h**0.5
+        print(f"side is {h_under_root}")
         input()
 else:
     print("error:please enter on of the mentioned numbers")
