@@ -1,0 +1,23 @@
+import turtle
+import colorsys
+win = turtle.Screen()
+win.title("hmmmm")
+win.bgcolor("black")
+win.setup(width=1000, height=1000)
+win.tracer(0)
+a = turtle.Turtle()
+a.speed(0)
+cc = 0
+for i in range(1000):
+    color = colorsys.hsv_to_rgb(cc,1,0.5)
+    cc += 1/75
+    a.color(color)
+    a.forward(100)
+    a.left(250)
+    for j in range(20):
+        a.forward(10)
+        for k in range(3):
+            a.forward(20)
+            a.right(120)
+while True:
+    win.update()

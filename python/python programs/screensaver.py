@@ -45,9 +45,10 @@ while running:
             running = False 
     time_run()
     time = (miliseconds,seconds,minutes,hours)
-    #randomize the position of the moving box and add the borders for it
+    #randomize the position of the moving box
     mx += sx
     my += sy
+    #add borders
     if mx <= 0 or mx >= 1520:
         sx *= -1
     if my <=0 or my >= 880:
