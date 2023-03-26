@@ -19,6 +19,7 @@ my = random.randrange(200,880)
 sx = 3
 sy = 2
 clock = pygame.time.Clock()
+pygame.display.get_allow_screensaver
 #making the clock
 def time_run():
     global miliseconds,seconds,minutes,hours

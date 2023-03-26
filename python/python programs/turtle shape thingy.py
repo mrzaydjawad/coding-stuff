@@ -1,11 +1,11 @@
 import turtle
 import random 
-r_x = random.randint(0,1500)
-r_y = random.randint(0,1000)
+r_x = random.randint(0,1408)
+r_y = random.randint(0,792)
 win = turtle.Screen()
 win.title("moving")
 win.bgcolor("green")
-win.setup(width=1500, height=1000)
+win.setup(width=1408, height=792)
 win.tracer(0)
 def food():
     f = turtle.Turtle()
