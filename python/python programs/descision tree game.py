@@ -9,9 +9,9 @@ if option_1 == "a":
             print("Successfully escapes\n-------------------\nescaped ending")
         if option_1aa == "b":
             option_1aab = input("(a)saves a group of prople\n(b)saves an abandoned child\n(a/b):\n")
-            if option_1aab == "a":
-                print("Adopts the child and lives as a father\n -------------------------------------- \nfather ending")
             if option_1aab == "b":
+                print("Adopts the child and lives as a father\n -------------------------------------- \nfather ending")
+            if option_1aab == "a":
                 print("saves the group\n---------------\nsaviour ending")
     if option_1a == "b":
         option_1ab = input("(a)dosen't attend the party\n(b)attends the party\n(a/b):\n")
