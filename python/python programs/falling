@@ -48,8 +48,6 @@ class Player:
             self.x = 10
         self.rect = pygame.Rect(int(self.x), int(self.y), 30, 30)
 
-#Player Initialization
-
 player = Player(WIDTH/2, HEIGHT/2)
 
 class Player_2:
@@ -91,8 +89,6 @@ class Player_2:
             self.x_2 = 10
 
         self.rect_2 = pygame.Rect(int(self.x_2), int(self.y_2), 30, 30)
-
-#Player Initialization
 
 player_2 = Player_2(WIDTH/2, HEIGHT/2)
 
