@@ -3,7 +3,7 @@ import colorsys
 win = turtle.Screen()
 win.title("hmmmm")
 win.bgcolor("black")
-win.setup(width=1000, height=1000)
+win.setup(width=1920, height=1080)
 win.tracer(0)
 def one():
     a = turtle.Turtle()
@@ -21,7 +21,21 @@ def one():
                 a.right(250)
 def two():
     b = turtle.Turtle()
-    #to be continue
+    ll = 100
+    ff = 100
+    cc = 0
+    for i in range(100):
+        color = colorsys.hsv_to_rgb(cc,1,0.5)
+        cc += 1/70
+        b.color(color)
+        for f in range(100):
+            ff -= 0.1
+            b.forward(ff)
+            ll += 10
+            b.left(ll)
+            print(ll)
+
+
 def three():
     c = turtle.Turtle
     #to be continued
