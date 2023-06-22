@@ -24,7 +24,7 @@ def two():
     ll = 100
     ff = 100
     cc = 0
-    for i in range(100):
+    for i in range(50):
         color = colorsys.hsv_to_rgb(cc,1,0.5)
         cc += 1/70
         b.color(color)
