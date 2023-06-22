@@ -1,14 +1,15 @@
-WIDTH, HEIGHT = 940, 1040
+WIDTH, HEIGHT = 1000, 1000
 TITLE = "2 player game"
 import pygame
 import sys
+import random
 #pygame initialization
 pygame.init()
 win = pygame.display.set_mode((WIDTH, HEIGHT),pygame.RESIZABLE)
 pygame.display.set_caption(TITLE)
 clock = pygame.time.Clock()
 
-#Player Class
+#Player Classes
 class Player:
     def __init__(self, x, y):
         self.x = int(520)
@@ -42,11 +43,16 @@ class Player:
         self.y += self.velY
 
         #adding borders
-        if self.x >= 900:
-            self.x = 900
-        if self.x <= 10:
-            self.x = 10
-        self.rect = pygame.Rect(int(self.x), int(self.y), 30, 30)
+        if self.x >= 950:
+            self.x = 950
+        if self.x <= 50:
+            self.x = 50
+        if self.y >= 950:
+            self.y = 950
+        if self.y <= 50:
+            self.y = 50
+
+        self.rect = pygame.Rect(int(self.x), int(self.y), 25, 25)
 
 player = Player(WIDTH/2, HEIGHT/2)
 
@@ -83,25 +89,53 @@ class Player_2:
         self.y_2 += self.velY_2
 
         #adding borders
-        if self.x_2 >= 900:
-            self.x_2 = 900
-        if self.x_2 <= 10:
-            self.x_2 = 10
+        if self.x_2 >= 950:
+            self.x_2 = 950
+        if self.x_2 <= 50:
+            self.x_2 = 50
+        if self.y_2 >= 950:
+            self.y_2 = 950
+        if self.y_2 <= 50:
+            self.y_2 = 50
 
-        self.rect_2 = pygame.Rect(int(self.x_2), int(self.y_2), 30, 30)
+        self.rect_2 = pygame.Rect(int(self.x_2), int(self.y_2), 25, 25)
 
 player_2 = Player_2(WIDTH/2, HEIGHT/2)
+
+#obstacles
+
+class Obstacle:
+    def __init__(self_3, x_3, y_3):
+        self_3.x_3 = int(0)
+        self_3.y_3 = int(800)
+        self_3.rect_3 = pygame.Rect(self_3.x_3, self_3.y_3, 500, 30)
+        self_3.color_3 = (179, 0, 0)
+        self_3.velX_3 = 0
+        self_3.velY_3 = 2
+        self_3.speed_3 = 4
+        
+    def draw(self_3, win):
+        pygame.draw.rect((win), self_3.color_3, self_3.rect_3)
+    
+    def update(self_3):
+        self_3.velX_3 = 0
+        self_3.velY_3 = 0
+        
+        self_3.rect_3 = pygame.Rect(int(self_3.x_3), int(self_3.y_3),1000, 50)
+
+obstacle = Obstacle(WIDTH/2, HEIGHT/2)
 
 #Main Loop
 
 while True:
 
-    #player 1 controls
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+
+            #player 1 controls
+
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 player.left_pressed = True
@@ -121,7 +155,7 @@ while True:
             if event.key == pygame.K_DOWN:
                 player.down_pressed = False
 
-    #player 2 controls
+            #player 2 controls
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
@@ -140,18 +174,22 @@ while True:
             if event.key == pygame.K_w:
                 player_2.up_pressed_2 = False
             if event.key == pygame.K_s:
-                player_2.down_pressed_2 = False
+                player_2.down_pressed_2 = False  
 
-        
+    obstacle 
+    
     #Draw
 
     win.fill((12, 24, 36))  
     player.draw(win)
     player_2.draw(win)
+    obstacle.draw(win)
 
     #update
+
     player.update()
     player_2.update()
+    obstacle.update()
     pygame.display.flip()
 
     clock.tick(120)
