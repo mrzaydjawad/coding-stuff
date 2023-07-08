@@ -34,20 +34,13 @@ def two():
             ll += 10
             b.left(ll)
             print(ll)
-
-
-def three():
-    c = turtle.Turtle
-    #to be continued
 def menu():
-    print("[1]\n[2]\n[3]")
-    d = int(input("slect an animation thing(1,2,3):"))
+    print("[1]\n[2]")
+    d = int(input("slect an animation thing(1,2):"))
     if d == 1:
         one()
     if d == 2:
         two()
-    if d == 3:
-        three()
 menu()
 while True:
     win.update()

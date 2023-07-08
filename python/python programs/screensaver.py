@@ -3,8 +3,8 @@ import pygame
 pygame.init()
 #defining all the variables
 screen = pygame.display.set_mode((1920,1080))
-bg = pygame.image.load('C:/Users/zaydz/Desktop/coding/python/python programs/images/backrooms.jpg')
-mover = pygame.image.load('C:/Users/zaydz/Desktop/coding/python/python programs/images/welcome.png')
+bg = pygame.image.load('E:/coding and wor/coding/python/python programs/images/backrooms.jpg')
+mover = pygame.image.load('E:/coding and wor/coding/python/python programs/images/welcome.png')
 miliseconds = 0
 seconds = 0
 minutes = 0
@@ -14,8 +14,8 @@ right_wall = 0
 up_wall = 0
 down_wall = 0
 corner = 0
-mx = random.randrange(400,1520)
-my = random.randrange(200,880)
+mx = random.randrange(460,1520)
+my = random.randrange(200,820)
 sx = 3
 sy = 2
 clock = pygame.time.Clock()
@@ -52,30 +52,30 @@ while running:
     #add borders
     if mx <= 0 or mx >= 1520:
         sx *= -1
-    if my <=0 or my >= 880:
+    if my <=60 or my >= 820:
         sy *= -1
     #checking for wall collisions
     if mx <= 0:
         left_wall += 1
     if mx >= 1520:
         right_wall += 1
-    if my <= 0:
+    if my <= 60:
         up_wall += 1
-    if my >= 880:
+    if my >= 820:
         down_wall += 1
     #checking for corners
-    if (mx >= 1520) and (my >= 880):
+    if (mx >= 1520) and (my >= 820):
         corner += 1
-    if (mx >= 1520) and (my <= 0):
+    if (mx >= 1520) and (my <= 60):
         corner += 1
-    if (mx <= 0) and (my >= 880):
+    if (mx <= 0) and (my >= 820):
         corner += 1
-    if (mx <= 0) and (my <= 0):
+    if (mx <= 60) and (my <= 60):
         corner += 1
     #putting everything on the screen
-    tume = pygame.font.Font("C:/Users/zaydz/Desktop/coding/python/python programs/fonts/Sitka.ttc",50)
+    tume = pygame.font.Font("E:/coding and wor/coding/python/python programs/fonts/Sitka.ttc",50)
     tumo = tume.render(f"hour : {hours}  minute : {minutes}  second : {seconds}",False,(255,255,255))
-    wallas = pygame.font.Font("C:/Users/zaydz/Desktop/coding/python/python programs/fonts/Sitka.ttc",50)
+    wallas = pygame.font.Font("E:/coding and wor/coding/python/python programs/fonts/Sitka.ttc",50)
     walls = wallas.render(f"left wall:{left_wall}  right wall:{right_wall}  upper wall:{up_wall}  lower wall:{down_wall}  corners:{corner}",False,(255,255,255))
     screen.blit(bg,(0,0))
     screen.blit(mover,(mx,my))
