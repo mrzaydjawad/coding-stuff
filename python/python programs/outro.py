@@ -1,5 +1,4 @@
 import os
-import logging
 from playsound import playsound
 sec = 12
 os.system(f"shutdown /s /t {sec}")
