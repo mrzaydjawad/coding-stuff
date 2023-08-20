@@ -3,7 +3,7 @@ import datetime
 pygame.init()
 #defining all the variables
 screen = pygame.display.set_mode((1920,1080))
-bg = pygame.image.load('E:\coding\coding\python\python programs\images\wpfff.jpg')
+bg = pygame.image.load('E:\coding\coding\python\python programs\images\wpfff.png')
 miliseconds = 0
 seconds = 0
 minutes = 0
@@ -60,4 +60,4 @@ while running:
     screen.blit(clock_render,(0,0))
     #update
     pygame.display.update()
-    clock.tick(50)
+    clock.tick(55)
