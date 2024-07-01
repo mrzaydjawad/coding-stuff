@@ -1,0 +1,104 @@
+import pygame
+import math
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the display
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Pixelated Spinning 3D Cube")
+
+# Define the cube vertices
+vertices = [
+    [-1, -1, -1],
+    [1, -1, -1],
+    [1, 1, -1],
+    [-1, 1, -1],
+    [-1, -1, 1],
+    [1, -1, 1],
+    [1, 1, 1],
+    [-1, 1, 1]
+]
+
+# Define the edges connecting the vertices
+edges = [
+    (0, 1),
+    (1, 2),
+    (2, 3),
+    (3, 0),
+    (4, 5),
+    (5, 6),
+    (6, 7),
+    (7, 4),
+    (0, 4),
+    (1, 5),
+    (2, 6),
+    (3, 7)
+]
+
+def rotate(vertices, angle_x, angle_y, angle_z):
+    """Rotate the vertices around the x, y, and z axis."""
+    cos_x, sin_x = math.cos(angle_x), math.sin(angle_x)
+    cos_y, sin_y = math.cos(angle_y), math.sin(angle_y)
+    cos_z, sin_z = math.cos(angle_z), math.sin(angle_z)
+
+    rotated_vertices = []
+    for x, y, z in vertices:
+        # Rotate around x-axis
+        y, z = y * cos_x - z * sin_x, y * sin_x + z * cos_x
+        # Rotate around y-axis
+        x, z = x * cos_y + z * sin_y, -x * sin_y + z * cos_y
+        # Rotate around z-axis
+        x, y = x * cos_z - y * sin_z, x * sin_z + y * cos_z
+        rotated_vertices.append((x, y, z))
+    return rotated_vertices
+
+def project(vertices, width, height, scale=1, center_x=0, center_y=0):
+    """Project 3D vertices onto a 2D plane."""
+    projected_vertices = []
+    for x, y, z in vertices:
+        f = scale / (z + 3)  # Perspective projection
+        x, y = x * f + center_x, -y * f + center_y  # Adjust for screen
+        projected_vertices.append((x, y))
+    return projected_vertices
+
+def draw(vertices, edges, width, height):
+    """Draw the edges of the cube using pixels."""
+    screen.fill((0, 0, 0))  # Clear the screen with black
+    block_size = 5
+    for start, end in edges:
+        x1, y1 = vertices[start]
+        x2, y2 = vertices[end]
+        for t in range(0, 101):
+            t /= 100
+            x = int(x1 + t * (x2 - x1))
+            y = int(y1 + t * (y2 - y1))
+            if 0 <= x < width and 0 <= y < height:
+                pygame.draw.rect(screen, (255, 255, 255), (x, y, block_size, block_size))
+
+    pygame.display.flip()
+
+def main():
+    angle_x, angle_y, angle_z = 0, 0, 1
+    running = True
+
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        rotated_vertices = rotate(vertices, angle_x, angle_y, angle_z)
+        projected_vertices = project(rotated_vertices, width, height, scale=600, center_x=width//2, center_y=height//2)
+        draw(projected_vertices, edges, width, height)
+
+        angle_x += 0.009
+        angle_y += 0.009
+        angle_z += 0.009
+
+        pygame.time.wait(10)
+
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
